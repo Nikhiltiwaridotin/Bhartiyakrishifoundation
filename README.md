@@ -189,7 +189,7 @@ BharatiyaKrishiFoundation/
 ### 📞 Contact Information
 - **Phone**: 1800-123-4567
 - **Email**: info@bharatiyakrishi.org
-- **Address**: Krishi Bhawan, New Delhi - 110001
+- **Address**: Indra Nagar Lucknow 226010
 
 ### 🌐 Social Media
 - Facebook: [Bharatiya Krishi Foundation](https://facebook.com/bharatiyakrishi)
@@ -222,3 +222,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 **Slogan**: "Direct Benefits of Government Schemes to Farmers - With Transparency"
 
 *Bharatiya Krishi Foundation - Progress of Farmers, Progress of Nation*
+
