@@ -1375,104 +1375,136 @@ body {
     }
     
     .section {
-        padding: 60px 0;
+        padding: 40px 0;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     /* Navigation */
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand i {
+        font-size: 1.5rem;
+    }
+    
     .navbar-nav {
         text-align: center;
         padding: 20px 0;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    
+    .nav-link {
+        padding: 12px 20px !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
     }
     
     /* Hero Section */
     .hero {
-        padding: 100px 0 60px;
+        padding: 80px 0 40px;
+        min-height: 80vh;
     }
     
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    /* Tab Navigation */
-    .tab-navigation {
-        flex-direction: column;
-    }
-    
-    .tab-btn {
-        flex-direction: row;
-        justify-content: center;
-        padding: 15px;
-        min-width: auto;
-    }
-    
-    .tab-btn span {
-        font-size: 1rem;
-    }
-    
-    .tab-content {
-        padding: 30px 20px;
-    }
-    
-    /* Form Styles */
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    /* Contact Section */
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .contact-form-container {
-        padding: 30px 20px;
-    }
-    
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
     
     .hero-content p {
         font-size: 1rem;
-    }
-    
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        margin-bottom: 25px;
     }
     
     .hero-buttons {
         flex-direction: column;
+        gap: 15px;
         align-items: center;
     }
     
-    .initiative-card,
-    .disaster-card,
-    .transparency-card,
-    .portal-card {
-        padding: 30px 20px;
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+    
+    .image-placeholder {
+        min-height: 200px;
+        padding: 40px 20px;
+    }
+    
+    /* About Section */
+    .about-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .role-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .role-card i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .role-card h5 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .role-card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Initiative Cards */
+    .initiative-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .initiative-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .initiative-card p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
     
     .stats {
@@ -1480,10 +1512,1088 @@ body {
         gap: 15px;
     }
     
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    /* Disaster Relief */
+    .disaster-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .disaster-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .disaster-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .disaster-card p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .disaster-card ul {
+        margin-bottom: 20px;
+    }
+    
+    .disaster-card li {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    
+    /* Transparency Dashboard */
+    .transparency-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .transparency-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .transparency-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .transparency-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* Donation Section */
+    .donation-card {
+        padding: 25px 20px;
+    }
+    
+    .donation-benefits {
+        margin-bottom: 25px;
+    }
+    
+    .donation-benefits li {
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .donation-options .btn {
+        margin-bottom: 10px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .custom-amount {
+        margin-top: 15px;
+    }
+    
+    /* Farmer Portal */
+    .portal-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .portal-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .portal-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .portal-card p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Portal Header */
+    .portal-header {
+        padding: 60px 0 40px;
+    }
+    
+    .portal-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .portal-header p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .portal-stats {
+        margin-top: 30px;
+    }
+    
+    .stat-item {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    
+    .stat-item p {
+        font-size: 0.85rem;
+    }
+    
+    /* Tab Navigation */
+    .tab-navigation {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .tab-btn {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px 20px;
+        min-width: auto;
+        border-bottom: 1px solid var(--border-color);
+        text-align: left;
+    }
+    
+    .tab-btn:last-child {
+        border-bottom: none;
+    }
+    
+    .tab-btn i {
+        font-size: 1.1rem;
+        margin-right: 12px;
+        min-width: 20px;
+    }
+    
+    .tab-btn span {
+        font-size: 0.95rem;
+    }
+    
+    .tab-content {
+        padding: 25px 20px;
+    }
+    
+    /* Form Styles */
+    .form-container {
+        max-width: 100%;
+    }
+    
+    .form-container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .form-container > p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .portal-form {
+        gap: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .error-message {
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+    
+    .checkbox-label {
+        font-size: 0.85rem;
+    }
+    
+    .checkmark {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    
+    .form-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .form-links a {
+        font-size: 0.85rem;
+    }
+    
+    /* Tracking Results */
+    .tracking-results {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    
+    .tracking-results h4 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .status-timeline::before {
+        left: 20px;
+    }
+    
+    .status-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    
+    .status-content h5 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .status-content p {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    
+    .status-date {
+        font-size: 0.75rem;
+    }
+    
+    /* Security Notice */
+    .security-notice {
+        margin-top: 25px;
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .security-notice i {
+        font-size: 1.2rem;
+    }
+    
+    .security-notice h5 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .security-notice p {
+        font-size: 0.85rem;
+    }
+    
+    /* Schemes Container */
+    .schemes-container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .schemes-container > p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .scheme-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .scheme-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .scheme-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .scheme-card p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .scheme-card ul {
+        margin-bottom: 20px;
+    }
+    
+    .scheme-card li {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    
+    /* Support Container */
+    .support-container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    
+    .support-container > p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .support-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .support-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .support-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .support-card p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Contact Section */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-item {
+        margin-bottom: 25px;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-right: 15px;
+    }
+    
+    .contact-details h4 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    
+    .contact-details p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo i {
+        font-size: 1.3rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 15px;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+    
+    .btn-lg {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .btn-full {
+        width: 100%;
+    }
+    
+    /* Notification System */
     .notification-container {
-        left: 15px;
-        right: 15px;
+        left: 10px;
+        right: 10px;
         max-width: none;
+    }
+    
+    .notification {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .notification-header {
+        margin-bottom: 8px;
+    }
+    
+    .notification-title {
+        font-size: 0.95rem;
+    }
+    
+    .notification-message {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .section {
+        padding: 30px 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    /* Navigation */
+    .navbar {
+        padding: 8px 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand i {
+        font-size: 1.3rem;
+    }
+    
+    .navbar-nav {
+        padding: 15px 0;
+        margin-top: 8px;
+    }
+    
+    .nav-link {
+        padding: 10px 15px !important;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 70px 0 30px;
+        min-height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-buttons {
+        gap: 12px;
+    }
+    
+    .hero-buttons .btn {
+        max-width: 250px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-image {
+        margin-top: 25px;
+    }
+    
+    .image-placeholder {
+        min-height: 180px;
+        padding: 30px 15px;
+    }
+    
+    .image-placeholder i {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    
+    .image-placeholder p {
+        font-size: 0.85rem;
+    }
+    
+    /* About Section */
+    .about-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .about-content p {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+    
+    .role-card {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .role-card i {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .role-card h5 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+    
+    .role-card p {
+        font-size: 0.8rem;
+    }
+    
+    /* Initiative Cards */
+    .initiative-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .initiative-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .initiative-card p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+    
+    .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    /* Disaster Relief */
+    .disaster-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .disaster-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .disaster-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .disaster-card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .disaster-card li {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    
+    /* Transparency Dashboard */
+    .transparency-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .transparency-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .transparency-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+    
+    .transparency-card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Donation Section */
+    .donation-card {
+        padding: 20px 15px;
+    }
+    
+    .donation-benefits li {
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+    
+    .donation-options .btn {
+        margin-bottom: 8px;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+    
+    /* Farmer Portal */
+    .portal-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .portal-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .portal-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .portal-card p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Portal Header */
+    .portal-header {
+        padding: 50px 0 30px;
+    }
+    
+    .portal-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .portal-header p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .portal-stats {
+        margin-top: 25px;
+    }
+    
+    .stat-item {
+        padding: 12px 8px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+    
+    .stat-item p {
+        font-size: 0.8rem;
+    }
+    
+    /* Tab Navigation */
+    .tab-btn {
+        padding: 12px 15px;
+    }
+    
+    .tab-btn i {
+        font-size: 1rem;
+        margin-right: 10px;
+        min-width: 18px;
+    }
+    
+    .tab-btn span {
+        font-size: 0.9rem;
+    }
+    
+    .tab-content {
+        padding: 20px 15px;
+    }
+    
+    /* Form Styles */
+    .form-container h3 {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+    
+    .form-container > p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .portal-form {
+        gap: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .error-message {
+        font-size: 0.75rem;
+        margin-top: 3px;
+    }
+    
+    .checkbox-label {
+        font-size: 0.8rem;
+    }
+    
+    .checkmark {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    
+    .form-links {
+        gap: 8px;
+    }
+    
+    .form-links a {
+        font-size: 0.8rem;
+    }
+    
+    /* Tracking Results */
+    .tracking-results {
+        margin-top: 25px;
+        padding: 15px;
+    }
+    
+    .tracking-results h4 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .status-timeline::before {
+        left: 18px;
+    }
+    
+    .status-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 12px;
+    }
+    
+    .status-content h5 {
+        font-size: 0.95rem;
+        margin-bottom: 3px;
+    }
+    
+    .status-content p {
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+    
+    .status-date {
+        font-size: 0.7rem;
+    }
+    
+    /* Security Notice */
+    .security-notice {
+        margin-top: 20px;
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .security-notice i {
+        font-size: 1.1rem;
+    }
+    
+    .security-notice h5 {
+        font-size: 0.95rem;
+        margin-bottom: 3px;
+    }
+    
+    .security-notice p {
+        font-size: 0.8rem;
+    }
+    
+    /* Schemes Container */
+    .schemes-container h3 {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+    
+    .schemes-container > p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .scheme-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .scheme-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .scheme-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .scheme-card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .scheme-card li {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    
+    /* Support Container */
+    .support-container h3 {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+    
+    .support-container > p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .support-card {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .support-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .support-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .support-card p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Contact Section */
+    .contact-content {
+        gap: 25px;
+    }
+    
+    .contact-item {
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-right: 12px;
+    }
+    
+    .contact-details h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .contact-details p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .contact-form-container {
+        padding: 20px 15px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 30px 0 15px;
+    }
+    
+    .footer-content {
+        gap: 20px;
+    }
+    
+    .footer-logo {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .footer-logo i {
+        font-size: 1.2rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .footer-links li {
+        margin-bottom: 6px;
+    }
+    
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 12px;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+    
+    /* Notification System */
+    .notification-container {
+        left: 8px;
+        right: 8px;
+    }
+    
+    .notification {
+        padding: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .notification-header {
+        margin-bottom: 6px;
+    }
+    
+    .notification-title {
+        font-size: 0.9rem;
+    }
+    
+    .notification-message {
+        font-size: 0.8rem;
     }
 }
 
@@ -1506,6 +2616,118 @@ body {
 
 .mt-30 {
     margin-top: 30px;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Improve touch targets */
+    .btn, .nav-link, .tab-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    /* Better spacing for mobile */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .col-md-6, .col-lg-4, .col-lg-6 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Improve form usability on mobile */
+    input, select, textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+    
+    /* Better card spacing */
+    .card, .initiative-card, .disaster-card, .transparency-card, .portal-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Improve tab navigation */
+    .tab-navigation {
+        position: sticky;
+        top: 70px;
+        z-index: 100;
+        background: var(--light-gray);
+    }
+    
+    /* Better button spacing */
+    .hero-buttons .btn {
+        margin-bottom: 10px;
+    }
+    
+    /* Improve readability */
+    p, li {
+        line-height: 1.6;
+    }
+    
+    /* Better image handling */
+    .image-placeholder {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even better touch targets for small screens */
+    .btn, .nav-link, .tab-btn {
+        min-height: 48px;
+        padding: 12px 16px;
+    }
+    
+    /* Improve form layout */
+    .form-group {
+        margin-bottom: 16px;
+    }
+    
+    /* Better spacing */
+    .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    
+    .col-md-6, .col-lg-4, .col-lg-6 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    /* Improve card readability */
+    .card, .initiative-card, .disaster-card, .transparency-card, .portal-card {
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+    
+    /* Better button grouping */
+    .hero-buttons {
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Improve navigation */
+    .navbar-nav {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    
+    /* Better tab scrolling */
+    .tab-navigation {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+        min-width: 120px;
+    }
 }
 
 /* Loading States */
