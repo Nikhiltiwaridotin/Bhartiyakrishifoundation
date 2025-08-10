@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Portal - Bhartiya Krishi Foundation</title>
+    <meta name="description" content="Access government schemes, track applications, and manage payments through Bhartiya Krishi Foundation's comprehensive farmer portal.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-seedling"></i>
+                <span>Bhartiya Krishi Foundation</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#initiatives">Our Initiatives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#disaster-relief">Disaster Relief</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#transparency">Transparency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#donate">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#farmer-portal">Farmer Portal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Farmer Portal Header -->
+    <section class="portal-header py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold text-primary mb-3">Farmer Portal</h1>
+                    <p class="lead mb-4">Access government schemes, track applications, and manage payments</p>
+                    <div class="portal-stats">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="counter" data-target="150000">0</h3>
+                                    <p>Registered Farmers</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="counter" data-target="450000000">0</h3>
+                                    <p>Benefits Distributed (₹)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="counter" data-target="95">0</h3>
+                                    <p>Success Rate (%)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-item">
+                                    <h3 class="counter" data-target="24">0</h3>
+                                    <p>Hours Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <section class="tab-section py-5">
+        <div class="container">
+            <div class="tab-container">
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="registration">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Registration</span>
+                    </button>
+                    <button class="tab-btn" data-tab="login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>Login</span>
+                    </button>
+                    <button class="tab-btn" data-tab="tracking">
+                        <i class="fas fa-search"></i>
+                        <span>Track Application</span>
+                    </button>
+                    <button class="tab-btn" data-tab="payment">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Payment Gateway</span>
+                    </button>
+                    <button class="tab-btn" data-tab="schemes">
+                        <i class="fas fa-list-alt"></i>
+                        <span>Available Schemes</span>
+                    </button>
+                    <button class="tab-btn" data-tab="support">
+                        <i class="fas fa-headset"></i>
+                        <span>Support</span>
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Registration Tab -->
+                    <div class="tab-pane active" id="registration">
+                        <div class="form-container">
+                            <h3>Farmer Registration</h3>
+                            <p>Register to access government schemes and track your applications</p>
+                            
+                            <form id="farmerRegistrationForm" class="portal-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regFirstName">First Name *</label>
+                                            <input type="text" id="regFirstName" name="firstName" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regLastName">Last Name *</label>
+                                            <input type="text" id="regLastName" name="lastName" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regEmail">Email Address *</label>
+                                            <input type="email" id="regEmail" name="email" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regPhone">Phone Number *</label>
+                                            <input type="tel" id="regPhone" name="phone" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regAadhar">Aadhar Number *</label>
+                                            <input type="text" id="regAadhar" name="aadhar" class="form-control" maxlength="12" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regVillage">Village/Town *</label>
+                                            <input type="text" id="regVillage" name="village" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regDistrict">District *</label>
+                                            <input type="text" id="regDistrict" name="district" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regState">State *</label>
+                                            <select id="regState" name="state" class="form-control" required>
+                                                <option value="">Select State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regPassword">Password *</label>
+                                            <input type="password" id="regPassword" name="password" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="regConfirmPassword">Confirm Password *</label>
+                                            <input type="password" id="regConfirmPassword" name="confirmPassword" class="form-control" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="regTerms" name="terms" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a>
+                                    </label>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Register</span>
+                                    <i class="fas fa-spinner fa-spin btn-loader" style="display: none;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Login Tab -->
+                    <div class="tab-pane" id="login">
+                        <div class="form-container">
+                            <h3>Farmer Login</h3>
+                            <p>Access your account to manage applications and track benefits</p>
+                            
+                            <form id="farmerLoginForm" class="portal-form">
+                                <div class="form-group">
+                                    <label for="loginEmail">Email Address or Aadhar Number *</label>
+                                    <input type="text" id="loginEmail" name="loginId" class="form-control" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="loginPassword">Password *</label>
+                                    <input type="password" id="loginPassword" name="password" class="form-control" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                                        <span class="checkmark"></span>
+                                        Remember me
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Login</span>
+                                    <i class="fas fa-spinner fa-spin btn-loader" style="display: none;"></i>
+                                </button>
+                                
+                                <div class="form-links">
+                                    <a href="#" class="link">Forgot Password?</a>
+                                    <a href="#" class="link">Need Help?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Tracking Tab -->
+                    <div class="tab-pane" id="tracking">
+                        <div class="form-container">
+                            <h3>Track Your Application</h3>
+                            <p>Check the status of your government scheme applications</p>
+                            
+                            <form id="trackingForm" class="portal-form">
+                                <div class="form-group">
+                                    <label for="trackingId">Application ID or Aadhar Number *</label>
+                                    <input type="text" id="trackingId" name="trackingId" class="form-control" placeholder="Enter Application ID or Aadhar Number" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="trackingPhone">Phone Number *</label>
+                                    <input type="tel" id="trackingPhone" name="phone" class="form-control" placeholder="Enter registered phone number" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Track Application</span>
+                                    <i class="fas fa-spinner fa-spin btn-loader" style="display: none;"></i>
+                                </button>
+                            </form>
+                            
+                            <!-- Tracking Results -->
+                            <div id="trackingResults" class="tracking-results" style="display: none;">
+                                <h4>Application Status</h4>
+                                <div class="status-timeline">
+                                    <div class="status-step completed">
+                                        <div class="status-icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="status-content">
+                                            <h5>Application Submitted</h5>
+                                            <p>Your application has been successfully submitted</p>
+                                            <span class="status-date">15 Dec 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-step completed">
+                                        <div class="status-icon">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <div class="status-content">
+                                            <h5>Under Review</h5>
+                                            <p>Your application is being reviewed by our team</p>
+                                            <span class="status-date">18 Dec 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-step active">
+                                        <div class="status-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="status-content">
+                                            <h5>Verification in Progress</h5>
+                                            <p>Document verification is currently in progress</p>
+                                            <span class="status-date">Current</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-step">
+                                        <div class="status-icon">
+                                            <i class="fas fa-hourglass-half"></i>
+                                        </div>
+                                        <div class="status-content">
+                                            <h5>Approval Pending</h5>
+                                            <p>Awaiting final approval from authorities</p>
+                                        </div>
+                                    </div>
+                                    <div class="status-step">
+                                        <div class="status-icon">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                        <div class="status-content">
+                                            <h5>Payment Processing</h5>
+                                            <p>Payment will be processed upon approval</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Tab -->
+                    <div class="tab-pane" id="payment">
+                        <div class="form-container">
+                            <h3>Payment Gateway</h3>
+                            <p>Secure payment processing for scheme applications and fees</p>
+                            
+                            <form id="paymentForm" class="portal-form">
+                                <div class="form-group">
+                                    <label for="paymentType">Payment Type *</label>
+                                    <select id="paymentType" name="paymentType" class="form-control" required>
+                                        <option value="">Select Payment Type</option>
+                                        <option value="application_fee">Application Fee</option>
+                                        <option value="processing_fee">Processing Fee</option>
+                                        <option value="verification_fee">Verification Fee</option>
+                                        <option value="donation">Donation</option>
+                                    </select>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="paymentAmount">Amount (₹) *</label>
+                                    <input type="number" id="paymentAmount" name="amount" class="form-control" min="1" step="0.01" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="paymentName">Cardholder Name *</label>
+                                    <input type="text" id="paymentName" name="cardholderName" class="form-control" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="paymentCard">Card Number *</label>
+                                    <input type="text" id="paymentCard" name="cardNumber" class="form-control" maxlength="19" placeholder="1234 5678 9012 3456" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="paymentExpiry">Expiry Date *</label>
+                                            <input type="text" id="paymentExpiry" name="expiry" class="form-control" placeholder="MM/YY" maxlength="5" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="paymentCvv">CVV *</label>
+                                            <input type="text" id="paymentCvv" name="cvv" class="form-control" maxlength="4" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="saveCard" name="saveCard">
+                                        <span class="checkmark"></span>
+                                        Save card for future payments
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Process Payment</span>
+                                    <i class="fas fa-spinner fa-spin btn-loader" style="display: none;"></i>
+                                </button>
+                            </form>
+                            
+                            <!-- Payment Security Notice -->
+                            <div class="security-notice">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h5>Secure Payment</h5>
+                                    <p>Your payment information is encrypted and secure. We use industry-standard SSL encryption to protect your data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Schemes Tab -->
+                    <div class="tab-pane" id="schemes">
+                        <div class="schemes-container">
+                            <h3>Available Government Schemes</h3>
+                            <p>Browse and apply for government schemes available through our platform</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="scheme-card">
+                                        <div class="scheme-icon">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                        </div>
+                                        <h4>PM-KISAN</h4>
+                                        <p>Direct income support of ₹6,000 per year to eligible farmer families</p>
+                                        <ul>
+                                            <li>Annual benefit of ₹6,000</li>
+                                            <li>Direct bank transfer</li>
+                                            <li>No intermediaries</li>
+                                        </ul>
+                                        <a href="#registration" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="scheme-card">
+                                        <div class="scheme-icon">
+                                            <i class="fas fa-seedling"></i>
+                                        </div>
+                                        <h4>Free Seed Distribution</h4>
+                                        <p>Government-provided seeds delivered directly to farmers</p>
+                                        <ul>
+                                            <li>Quality assured seeds</li>
+                                            <li>Multiple crop varieties</li>
+                                            <li>Free of cost</li>
+                                        </ul>
+                                        <a href="#registration" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="scheme-card">
+                                        <div class="scheme-icon">
+                                            <i class="fas fa-tractor"></i>
+                                        </div>
+                                        <h4>Equipment Support</h4>
+                                        <p>Modern farming equipment and tools through government schemes</p>
+                                        <ul>
+                                            <li>Subsidized equipment</li>
+                                            <li>Latest technology</li>
+                                            <li>Installment options</li>
+                                        </ul>
+                                        <a href="#registration" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="scheme-card">
+                                        <div class="scheme-icon">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h4>Crop Insurance</h4>
+                                        <p>Comprehensive crop insurance coverage for farmers</p>
+                                        <ul>
+                                            <li>Natural disaster coverage</li>
+                                            <li>Pest damage protection</li>
+                                            <li>Affordable premiums</li>
+                                        </ul>
+                                        <a href="#registration" class="btn btn-primary">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Tab -->
+                    <div class="tab-pane" id="support">
+                        <div class="support-container">
+                            <h3>Farmer Support</h3>
+                            <p>Get help and support for all your queries and issues</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="support-card">
+                                        <div class="support-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <h4>24/7 Helpline</h4>
+                                        <p>Call our dedicated helpline for immediate assistance</p>
+                                        <a href="tel:+919876543210" class="btn btn-primary">Call Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="support-card">
+                                        <div class="support-icon">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <h4>Live Chat</h4>
+                                        <p>Chat with our support team for real-time assistance</p>
+                                        <button class="btn btn-primary" onclick="startLiveChat()">Start Chat</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="support-card">
+                                        <div class="support-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <h4>Email Support</h4>
+                                        <p>Send us an email for detailed assistance</p>
+                                        <a href="mailto:support@bhartiyakrishifoundation.org" class="btn btn-primary">Send Email</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="support-card">
+                                        <div class="support-icon">
+                                            <i class="fas fa-question-circle"></i>
+                                        </div>
+                                        <h4>FAQs</h4>
+                                        <p>Find answers to commonly asked questions</p>
+                                        <button class="btn btn-primary" onclick="showFAQs()">View FAQs</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Bhartiya Krishi Foundation. All rights reserved.</p>
+                    <p>Farmer Portal - Empowering farmers through technology</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
