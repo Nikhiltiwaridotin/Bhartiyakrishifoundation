@@ -61,6 +61,66 @@
         </div>
     </nav>
 
+    <!-- API call --> 
+
+    <!-- index.html -->
+<form id="registerForm">
+  <input name="name" placeholder="Name" required />
+  <input name="email" placeholder="Email" required />
+  <input name="password" type="password" placeholder="Password" required />
+  <button type="submit">Register</button>
+</form>
+<div id="msg"></div>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  const res = await fetch('http://localhost:5000/api/auth/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, password })
+  });
+
+  const data = await res.json();
+  document.getElementById('msg').innerText = data.msg || data.error || 'Error';
+});
+</script>
+
+    <!-- login.html -->
+<form id="loginForm">
+  <input name="email" placeholder="Email" required />
+  <input name="password" type="password" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+<div id="msg"></div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  const res = await fetch('http://localhost:5000/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await res.json();
+  if (data.token) {
+    document.getElementById('msg').innerText = 'Login Success!';
+    // Token ko localStorage me bhi save kar sakte hain
+    // localStorage.setItem('token', data.token);
+  } else {
+    document.getElementById('msg').innerText = data.msg || 'Login Failed';
+  }
+});
+</script>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -612,3 +672,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
